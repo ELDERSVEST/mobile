@@ -4,11 +4,12 @@ import { icons } from "../../../../constants"
 
 import styles from "./onboardscreenheader.style"
 
-const OnboardScreenHeaderButton = () => {
+const OnboardScreenHeaderButton = ({text}) => {
   return (
-    <View style={styles.container}>
+    <View style={styles.container(text)}>
+      {text && <Text style={styles.headerText}>Skip</Text>}
       
-        <Text style={styles.headerText}>Skip</Text>
+        
         
         <ScreenHeaderButton iconURL={icons.logo} />
     </View>

@@ -2,13 +2,13 @@ import { StyleSheet } from "react-native";
 import { FONT, SIZES } from "../../../../constants";
 
 const styles = StyleSheet.create({
-    container: {
+    container: (text = true) => ({
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: text ? 'space-between': 'flex-end',
         width: '100%',
         paddingHorizontal: SIZES.large,
         alignItems: "center"
-    },
+    }),
     headerText: {
         fontFamily: FONT.regular,
         fontSize: 16,

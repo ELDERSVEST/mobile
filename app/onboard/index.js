@@ -1,12 +1,10 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import { Stack, useRouter } from "expo-router";
-import { Button } from "../../components";
+import { Button, Onboard } from "../../components";
 
 const Onboarding = () => {
     return (
-        <View>
-            <Text>Onboarding</Text>
-        </View>
+        <Onboard />
     )
 }
 

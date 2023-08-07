@@ -7,6 +7,7 @@ const COLORS = {
 
     grayText: "#767676",
     blackText: "#010101",
+    white: "#FAFAFA",
 }
 
 const FONT = {
@@ -20,6 +21,7 @@ const SIZES = {
     small: 10,
     medium: 16,
     large: 20,
+    xlarge: 30,
 }
 
 const SHADOWS = {}
