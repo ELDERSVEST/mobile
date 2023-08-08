@@ -3,7 +3,7 @@ import { icons, COLORS } from "../../../constants"
 
 import styles from "./input.styles"
 
-const Input = ({ placeholder}) => {
+const Input = ({ placeholder, iconURL}) => {
   return (
     <View style={styles.inputContainer}>
         <TextInput 
@@ -12,7 +12,7 @@ const Input = ({ placeholder}) => {
             placeholderTextColor={COLORS.blackText}
         />
         <Image 
-            source={icons.eye}
+            source={iconURL}
         />
     </View>
     

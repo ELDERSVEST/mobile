@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { COLORS, SIZES } from "../../../constants";
+import { StyleSheet} from "react-native";
+import { COLORS } from "../../../constants";
 
 
 const styles = StyleSheet.create({
@@ -7,6 +7,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
+        borderTopWidth: 2,
+        borderColor: COLORS.grayText,
         height: 49,
         marginHorizontal: 40,
     },
@@ -30,15 +32,6 @@ const styles = StyleSheet.create({
         borderColor: COLORS.grayText,
         position: "relative",
     },
-    line: {
-        position: "absolute",
-        top: '35%',
-        left: '10%',
-        height: 2,
-        width: '80%',
-        backgroundColor: COLORS.grayText,
-        zIndex: -1,
-    },
     activeCircleText: {
         fontSize: 12,
         fontWeight: 600,
@@ -50,19 +43,29 @@ const styles = StyleSheet.create({
         color: COLORS.grayText,
     },
     progressCircleContainer: {
-        flexDirection: 'column', 
+        marginTop: -49,
         justifyContent: 'center', 
         alignItems: 'center',
+        zIndex: 100,
+        position: "relative",
     },
-    progressText: {
+    progressTextBox: {
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        width: 70, 
+        position: 'absolute', 
+        top: 20 
+    },
+    progressText: (mT=true) =>({
+        flex: 1,
         fontSize: 8,
         fontWeight: 400,
         color: '#05182A',
-        marginTop: 6,
-        maxWidth: 70,
-        // alignItems: "center",
-        // justifyContent: "center",
-    }
+        marginTop: mT == true ? 6 : 0,
+        whiteSpace: 'nowrap',
+        // position: "absolute",
+        // top: '100%',
+    })
 
 })
 

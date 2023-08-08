@@ -1,4 +1,4 @@
-import { View, Text, Switch } from "react-native"
+import { View, Text, Switch, ScrollView } from "react-native"
 import { SafeAreaView } from "react-native"
 import {Progress, ScreenHeaderButton, Input, Button} from "../"
 import { Stack } from "expo-router"
@@ -7,6 +7,8 @@ import { COLORS, icons, SIZES } from "../../constants"
 
 import globalStyles from "../../styles/globalStyles.style"
 import styles from "./registration.styles"
+
+
 
 
 const Registration = () => {
@@ -29,6 +31,10 @@ const Registration = () => {
                 headerTitle: ""
             }}
         />
+        <ScrollView
+        style={{flex: 1}}
+            showsVerticalScrollIndicator={false}
+        >
         <View style={globalStyles.boxContainer}>
             <View style={{ flexDirection: "row", justifyContent: "flex-end", padding: SIZES.large,}}>
                 <ScreenHeaderButton iconURL={icons.secondaryLogo} />
@@ -48,13 +54,13 @@ const Registration = () => {
                     <View>
                         <Text style={styles.inputLabel}>Password</Text>
 
-                        <Input placeholder="Gtryh3421." />
+                        <Input placeholder="Gtryh3421." iconURL={icons.eye} />
                         <Text style={styles.inputInfo}>Password strength: <Text style={{color: '#1473DF'}}>Fair</Text></Text>
                     </View>
                     <View style={{marginTop: 30}}>
                         <Text style={styles.inputLabel}>Confirm password</Text>
 
-                        <Input placeholder="**********" />
+                        <Input placeholder="**********" iconURL={icons.eyeOff} />
                     </View>
 
                     <View style={styles.biometricsContainer}>
@@ -62,12 +68,13 @@ const Registration = () => {
                         <Switch style={{ transform: [{ scaleX: 0.7 }, { scaleY: 0.7 }], marginTop: 30 }} />
                     </View>
                 </View>
-                <View style={{marginBottom: 45}}>
+                <View style={{marginVertical: 45, }}>
                     <Button title="Next" />
                 </View>
                 
             </View>
         </View>
+        </ScrollView>
         
     </SafeAreaView>
   )
