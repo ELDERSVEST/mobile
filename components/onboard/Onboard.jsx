@@ -1,7 +1,7 @@
 import { Stack } from 'expo-router'
 import { View, Text, Dimensions, SafeAreaView, ImageBackground, ScrollView, TouchableOpacity } from 'react-native'
 import { COLORS, SIZES, FONT, icons, images } from '../../constants'
-import { Button, OnboardScreenHeaderButton, ScreenHeaderButton } from '../../components'
+import { Button, ScreenHeaderButton, Header } from '../../components'
 
 import styles from './onboard.style'
 
@@ -47,7 +47,7 @@ const Onboard = () => {
                         }}
                         
                         />
-                        <OnboardScreenHeaderButton text={true} />
+                        <Header text='Skip' />
                     </ImageBackground>              
                 </View>
                 <View 
@@ -105,7 +105,7 @@ const Onboard = () => {
                         }}
                         
                         />
-                        <OnboardScreenHeaderButton text={false} />
+                        <Header leftIcon={false} />
                     </ImageBackground>              
                 </View>
                 <View 

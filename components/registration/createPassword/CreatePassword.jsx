@@ -1,11 +1,11 @@
 import { View, Text, Switch, ScrollView } from "react-native"
 import { SafeAreaView } from "react-native"
-import {Progress, ScreenHeaderButton, Input, Button} from ".."
+import {Progress, ScreenHeaderButton, Input, Button} from "../.."
 import { Stack } from "expo-router"
-import { COLORS, icons, SIZES } from "../../constants"
+import { COLORS, icons, SIZES } from "../../../constants"
 // import ScreenHeaderButton from "../"
 
-import globalStyles from "../../styles/globalStyles.style"
+import globalStyles from "../../../styles/globalStyles.style"
 import styles from "./createPassword.styles"
 
 
