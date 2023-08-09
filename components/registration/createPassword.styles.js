@@ -32,13 +32,17 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        
+        height: 50,
+        marginTop: 30,
     },
     biometricsText: {
-        marginTop: 30,
+        flexDirection: 'row',
         fontSize: 12,
         fontWeight: 600,
         color: COLORS.blackText,
+        alignItems: 'center',
+        
+        // justifyContent: 'center',
     },
     // switchButton: {
     //     height: 16,

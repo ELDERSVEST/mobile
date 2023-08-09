@@ -9,7 +9,7 @@ import OnboardScreenHeaderButton from "./common/headers/onboard/OnboardScreenHea
 import Onboard from "./onboard/Onboard"
 
 // registration screen
-import Registration from "./registration/Registration"
+import CreatePassword from "./registration/CreatePassword"
 
 //home screen
 
@@ -20,7 +20,7 @@ export {
     OnboardScreenHeaderButton,
     Onboard,
     Progress,
-    Registration,
+    CreatePassword,
     Input,
 }
 
