@@ -11,11 +11,21 @@ const globalStyles = StyleSheet.create({
         fontSize: size,
         fontWeight: 400,
         color: COLORS.grayText,
+        letterSpacing: 0.24,
     }),
     boxContainer: {
         flex: 1,
         padding: SIZES.large,
-    }
+    },
+    contentBox: {
+        flex: 1, 
+        flexDirection: "column", 
+        justifyContent: "space-between"
+    },
+    progressBox: {
+        marginTop: 20, 
+        marginBottom: 30,
+    },
 })
 
 export default globalStyles

@@ -38,19 +38,19 @@ const CreatePassword = () => {
             </View>
             
             
-                <View style={{flex: 1, flexDirection: "column", justifyContent: "space-between"}}>
+                <View style={globalStyles.contentBox}>
                     <ScrollView
                         style={{flex: 1}}
                         showsVerticalScrollIndicator={false}
                         alwaysBounceVertical={false}
                     >
-                        <View style={ styles.progressBox}>
+                        <View style={ globalStyles.progressBox}>
                             <Progress />
                         </View>
                     <View>
-                        <View style={{ }}>
-                            <Text style={globalStyles.headerText}>Create Password</Text>
-                        </View>
+                        
+                        <Text style={globalStyles.headerText}>Create Password</Text>
+                        
                         <View style={{ marginTop: 30, marginBottom: 30}}>
                             <Text style={styles.lightText}>Start your journey by creating a password</Text>
                         </View>

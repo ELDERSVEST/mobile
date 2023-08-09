@@ -4,11 +4,7 @@ import { COLORS, SIZES } from "../../../constants";
 
 
 const styles = StyleSheet.create({
-    progressBox: {
-        // flex: 1, 
-        marginTop: 20, 
-        marginBottom: 30,
-    },
+    
     lightText: {
         ...globalStyles.grayText(14),
         letterSpacing: 0.28,
