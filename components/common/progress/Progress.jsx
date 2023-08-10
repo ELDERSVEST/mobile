@@ -5,7 +5,10 @@ import styles from './progress.style'
 
 
 
-const Progress = () => {
+const Progress = ({ progress = 1}) => {
+    const circleStyle = (progress, circleNumber) => {
+        return circleNumber <= progress 
+    }
   return (
     <View style={styles.conatiner}>
         <View style={styles.progressCircleContainer}>
@@ -17,14 +20,14 @@ const Progress = () => {
             </View>
         </View>
         <View style={styles.progressCircleContainer}>
-            <View style={styles.normalCircle} >
-            <Text style={styles.CircleText}>2</Text>
+            <View style={circleStyle(progress, 2) ? styles.activeCircle : styles.normalCircle} >
+            <Text style={circleStyle(progress, 2) ? styles.activeCircleText : styles.CircleText}>2</Text>
             </View>
             <View style={styles.progressTextBox}>
             <Text style={styles.progressText()}>Secure wallet</Text></View>
         </View>
         <View style={styles.progressCircleContainer}>
-            <View style={styles.normalCircle} ><Text style={styles.CircleText}>3</Text></View>
+            <View style={circleStyle(progress, 3) ? styles.activeCircle : styles.normalCircle} ><Text style={circleStyle(progress, 3) ? styles.activeCircleText : styles.CircleText}>3</Text></View>
             <View style={styles.progressTextBox}>
                 <Text style={styles.progressText()}>Confirm Seed</Text><Text style={[ styles.progressText(false), { textAlign: 'center'}]}>Phrase</Text>
             </View>

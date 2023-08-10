@@ -23,10 +23,11 @@ const SecureWallet = () => {
             <View style={globalStyles.contentBox}>
                 <ScrollView
                     alwaysBounceVertical={false}
+                    showsVerticalScrollIndicator={false}
                     showsHorizontalScrollIndicator={false}
                 >
                     <View style={ globalStyles.progressBox}>
-                        <Progress />
+                        <Progress progress={2}/>
                     </View>
                     <View>
                         
@@ -40,26 +41,30 @@ const SecureWallet = () => {
                             <Text style={[globalStyles.grayText(), styles.infoText]}>Your seed phrase is a crucial component in accessing and recovering your cryptocurrency wallets and accounts.</Text>
 
                             <Text style={styles.heading}>Dos and Don'ts</Text>
-                            <Text style={[globalStyles.grayText(), styles.infoText]}>
+                            
+
+                            <View style={[globalStyles.grayText(), styles.infoText]}>
+                                <View style={styles.bulletBox}>
                                 
-                                <View style={{ flexDirection: "column"}}><Text style={styles.bullet}>&bull;</Text>
-                                <Text>Do memorize your seed phrase if possible, but always keep a written copy as a backup.</Text></View>
+                                    <View><Text style={styles.bullet}>&bull;</Text></View>
+                                    <View><Text style={styles.bulletText}>Do memorize your seed phrase if possible, but always keep a written copy as a backup.</Text></View>
+                                </View>
+                                <View style={styles.bulletBox}>
                                 
-                            </Text>
-                            <Text style={[globalStyles.grayText(), styles.infoText]}>
+                                    <View><Text style={styles.bullet}>&bull;</Text></View>
+                                    <View><Text style={styles.bulletText}>Do Not store your seed phrase digitally, especially on cloud storage or email accounts.</Text></View>
+                                </View>
+                                <View style={styles.bulletBox}>
                                 
-                                <View><Text style={styles.bullet}>&bull;</Text><Text>Do Not store your seed phrase digitally, especially on cloud storage or email accounts.</Text></View>
+                                    <View><Text style={styles.bullet}>&bull;</Text></View>
+                                    <View><Text style={styles.bulletText}>Do Not share your seed phrase with anyone, even if they claim to be from customer support or a trustworthy entity.</Text></View>
+                                </View>
                                 
-                            </Text>
-                            <Text style={[globalStyles.grayText(), styles.infoText]}>
-                                
-                                <Text style={styles.bullet}>&bull;</Text>
-                                <Text>Do Not share your seed phrase with anyone, even if they claim to be from customer support or a trustworthy entity.</Text>
-                                
-                            </Text>
+                            </View>
 
                             <Text style={styles.heading}>Conclusion</Text>
                             <Text style={[globalStyles.grayText(), styles.infoText]}>Your seed phrase is your ticket to accessing and recovering your cryptocurrency assets. Treat it with the utmost care and safeguard it diligently. Following the guidelines in this manual will help you maintain control over your funds and protect your investments from potential threats.</Text>
+                            
                         </View>
                         
                     </View>

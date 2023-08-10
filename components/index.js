@@ -9,7 +9,7 @@ import Header from "./common/headers/Header"
 
 
 //onboard screen
-import OnboardScreenHeaderButton from "./common/headers/onboard/OnboardScreenHeader"
+// import OnboardScreenHeaderButton from "./common/headers/onboard/OnboardScreenHeader"
 import Onboard from "./onboard/Onboard"
 
 
@@ -30,7 +30,7 @@ export {
     Button,
     Input,
     ScreenHeaderButton,
-    OnboardScreenHeaderButton,
+    // OnboardScreenHeaderButton,
     Onboard,
     Progress,
     CreatePassword,

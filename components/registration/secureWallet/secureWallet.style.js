@@ -21,11 +21,21 @@ const styles = StyleSheet.create({
         marginTop: 10,
         marginBottom: 20,
     },
+    bulletBox: {
+        flexDirection: "row",
+        paddingRight: 30,
+        // padding: 0,
+        // margin: 0,
+    },
     bullet:{
         color: COLORS.grayText,
         marginHorizontal: 10,
         fontSize: 12,
-    }
+    }, 
+    bulletText: {
+        // marginTop: 5,
+        color: COLORS.grayText,
+    },
 
 })
 
