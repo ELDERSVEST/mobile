@@ -1,5 +1,5 @@
 import { Stack } from "expo-router"
-import { View, Text, SafeAreaView } from "react-native"
+import { View, Text, SafeAreaView, ScrollView } from "react-native"
 import Header from "../../common/headers/Header"
 import { icons, COLORS } from "../../../constants"
 
@@ -7,7 +7,6 @@ import styles from "./secureWallet.style"
 import globalStyles from "../../../styles/globalStyles.style"
 
 import { Button, Progress } from "../../" 
-import { ScrollView } from "react-native"
 
 const SecureWallet = () => {
   return (

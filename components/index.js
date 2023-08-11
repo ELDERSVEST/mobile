@@ -18,6 +18,7 @@ import Onboard from "./onboard/Onboard"
 // registration screen
 import CreatePassword from "./registration/createPassword/CreatePassword"
 import SecureWallet from "./registration/secureWallet/SecureWallet"
+import SeedPhrase from "./registration/seedPhrase/SeedPhrase"
 
 
 
@@ -35,6 +36,7 @@ export {
     Progress,
     CreatePassword,
     SecureWallet,
+    SeedPhrase,
     Header,
 }
 

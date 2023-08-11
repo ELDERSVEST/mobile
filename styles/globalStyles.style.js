@@ -6,12 +6,14 @@ const globalStyles = StyleSheet.create({
         fontSize: SIZES.large,
         fontWeight: 600,
         color: COLORS.secondary,
+        letterSpacing: 0.4,
     },
     grayText: (size = 12) => ({
         fontSize: size,
         fontWeight: 400,
         color: COLORS.grayText,
         letterSpacing: 0.24,
+        lineHeight: 'normal',
     }),
     boxContainer: {
         flex: 1,
