@@ -1,7 +1,7 @@
 const COLORS = {
     primary: "#05182A",
     secondary: "#F8A01B",
-    tertiary: "orange",
+    inactive: "rgba(5, 24, 42, 0.50)",
 
     deepSecondary: "#F89F1B",
 

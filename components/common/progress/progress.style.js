@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
         borderTopWidth: 2,
         borderColor: COLORS.grayText,
         height: 49,
-        marginHorizontal: 40,
+        marginHorizontal: 42,
     },
     activeCircle: {
         height: 20,
