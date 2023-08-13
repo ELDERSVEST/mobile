@@ -1,5 +1,6 @@
 // common components
-import Button from "./common/button/Button"
+import Button from "./common/buttons/button/Button"
+import IconButton from "./common/buttons/IconButton/IconButton"
 import ScreenHeaderButton from "./common/headers/screenHeaderButton/ScreenHeaderButton"
 import Progress from "./common/progress/Progress"
 import Input from "./common/input/Input"
@@ -29,6 +30,7 @@ import SeedPhrase from "./registration/seedPhrase/SeedPhrase"
 
 export {
     Button,
+    IconButton,
     Input,
     ScreenHeaderButton,
     // OnboardScreenHeaderButton,

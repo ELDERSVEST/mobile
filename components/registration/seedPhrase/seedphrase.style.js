@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 import { SIZES, COLORS } from "../../../constants";
 
 const styles = StyleSheet.create({
+    // REVEAL PHRASE BOX 
     revealPhraseBox: {
         flexDirection: "column",
         justifyContent: "center",
@@ -40,6 +41,53 @@ const styles = StyleSheet.create({
         width: '100%'
         // marginVertical: 20,
     },
+
+
+    // SEEDPHRASE BOX
+    phraseContainer: {
+        position: "relative",
+        flex: 1,
+        flexDirection: "column",
+        flexWrap: "wrap",
+        // justifyContent: "space-between",
+        alignItems: "center",
+        height: 301,
+        gap: 20,
+        // columnGap: 50,
+        paddingHorizontal: 35,
+        paddingVertical: 20,
+        // marginBottom: 40,
+        backgroundColor: '#F1f1F1',
+        borderRadius: 10,
+        borderWidth: 0.2,
+        borderColor: COLORS.grayText
+    },
+    phraseBox: {
+        // flexBasis: '50%',
+        width: '50%',
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 10,
+    },
+    phraseNumber: {
+        color: COLORS.grayText,
+        fontSize: 14,
+        width: 16,
+    },
+    phraseText: {
+        width: 100,
+        alignItems: "center",
+        paddingVertical: 3,
+        borderWidth: 1,
+        borderRadius: 4,
+        borderColor: COLORS.primary,
+        fontSize: 12,
+    },
+    copyButtonBox: {
+        position: "absolute",
+        bottom: -9,
+        
+    }
 })
 
 export default styles
