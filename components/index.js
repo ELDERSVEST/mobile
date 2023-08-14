@@ -20,6 +20,7 @@ import Onboard from "./onboard/Onboard"
 import CreatePassword from "./registration/createPassword/CreatePassword"
 import SecureWallet from "./registration/secureWallet/SecureWallet"
 import SeedPhrase from "./registration/seedPhrase/SeedPhrase"
+import ConfirmSeedPhrase from "./registration/confirmSeedPhrase/ConfirmSeedPhrase"
 
 
 
@@ -39,6 +40,7 @@ export {
     CreatePassword,
     SecureWallet,
     SeedPhrase,
+    ConfirmSeedPhrase,
     Header,
 }
 

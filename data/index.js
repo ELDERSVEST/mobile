@@ -50,3 +50,44 @@ export const seedPhraseData = [
 
 ]
 
+export const confirmSeedPhraseData = [
+    {
+        id: 'stage',
+        title: 'stage'
+    },
+    {
+        id: 'vessel',
+        title: 'vessel'
+    },
+    {
+        id: 'flat',
+        title: 'flat'
+    },
+    {
+        id: 'water',
+        title: 'water'
+    },
+    {
+        id: 'diagram',
+        title: 'diagram'
+    },
+    {
+        id: 'family',
+        title: 'family'
+    },
+    {
+        id: 'express',
+        title: 'express'
+    },
+    {
+        id: 'ocean',
+        title: 'ocean'
+    },
+    {
+        id: 'sun',
+        title: 'sun'
+    },
+    
+
+]
+
