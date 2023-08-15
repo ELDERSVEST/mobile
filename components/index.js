@@ -21,7 +21,7 @@ import CreatePassword from "./registration/createPassword/CreatePassword"
 import SecureWallet from "./registration/secureWallet/SecureWallet"
 import SeedPhrase from "./registration/seedPhrase/SeedPhrase"
 import ConfirmSeedPhrase from "./registration/confirmSeedPhrase/ConfirmSeedPhrase"
-
+import RegistrationSuccess from "./registration/registrationSuccess/RegistrationSuccess"
 
 
 
@@ -33,6 +33,7 @@ export {
     Button,
     IconButton,
     Input,
+    Header,
     ScreenHeaderButton,
     // OnboardScreenHeaderButton,
     Onboard,
@@ -41,7 +42,7 @@ export {
     SecureWallet,
     SeedPhrase,
     ConfirmSeedPhrase,
-    Header,
+    RegistrationSuccess,
 }
 
 

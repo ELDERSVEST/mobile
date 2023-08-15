@@ -5,6 +5,7 @@ import eyeOff from "../assets/icons/eye_off.png"
 import back from "../assets/icons/back.png"
 import seedPhraseEyeOff from "../assets/icons/seedphrase_eye_off.png"
 import copy from '../assets/icons/copy.png'
+import check from '../assets/icons/check_mark.png'
 
 
 export default {
@@ -15,4 +16,5 @@ export default {
     back,
     seedPhraseEyeOff,
     copy,
+    check,
 }
