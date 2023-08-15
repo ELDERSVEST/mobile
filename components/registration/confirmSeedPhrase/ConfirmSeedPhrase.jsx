@@ -41,9 +41,17 @@ const ConfirmSeedPhrase = () => {
                                 <View 
                                     key={ phrase.id }
                                     style={styles.phraseBox}
-                                    >
+                                >
                                     <View style={styles.phraseNumber}><Text>{ index + 1 }</Text></View>
-                                    <View style={ index === 7 ? styles.confirmPhraseText : styles.phraseText}><Text> { index === 7 ? "" : phrase.title }</Text></View>
+                                    <View 
+                                        style={ 
+                                            index === 7 ? styles.confirmPhraseText :
+                                            index === 9 ?  styles.phraseText(true) :
+                                            styles.phraseText()
+                                        }
+                                    >
+                                        <Text> { index === 7 || index === 9 ? "" : phrase.title }</Text>
+                                    </View>
                                 </View>
                             ))}
 

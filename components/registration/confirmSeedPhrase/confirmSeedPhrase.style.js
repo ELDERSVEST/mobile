@@ -74,15 +74,16 @@ const styles = StyleSheet.create({
         fontSize: 14,
         width: 16,
     },
-    phraseText: {
+    phraseText: (dotted =  false) => ({
         width: 100,
         alignItems: "center",
         paddingVertical: 3,
         borderWidth: 1,
         borderRadius: 4,
         borderColor: COLORS.primary,
+        borderStyle: dotted ? "dashed" : "solid",
         fontSize: 12,
-    },
+    }),
     confirmPhraseContainer: {
         // flex: 1,
         flexDirection: "row",
