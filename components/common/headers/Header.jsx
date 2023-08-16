@@ -4,7 +4,7 @@ import ScreenHeaderButton from "./screenHeaderButton/ScreenHeaderButton"
 
 import styles from "./header.styles"
 
-const Header = ({ text='image', leftIcon=true, iconUrl = icons.back, logo= icons.logo }) => {
+const Header = ({ text='image', title="", leftIcon=true, rightIcon=true, iconUrl = icons.back, logo= icons.logo }) => {
     const LeftComponent = () => {
         return text === 'image' ? <ScreenHeaderButton iconURL={iconUrl} /> 
                         : <Text style={styles.headerText}>{text}</Text>
@@ -12,10 +12,10 @@ const Header = ({ text='image', leftIcon=true, iconUrl = icons.back, logo= icons
   return (
     <View style={styles.container(leftIcon)}>
       {leftIcon &&  <LeftComponent />}
-      
+      {title === "" ? "" : <View style={styles.headerTitleBox}><Text style={styles.headerTitle}>{title}</Text></View>}
         
         
-        <ScreenHeaderButton iconURL={logo} />
+      {rightIcon && <ScreenHeaderButton iconURL={logo} />}
     </View>
   )
 }

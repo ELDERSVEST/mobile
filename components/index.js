@@ -23,7 +23,9 @@ import SeedPhrase from "./registration/seedPhrase/SeedPhrase"
 import ConfirmSeedPhrase from "./registration/confirmSeedPhrase/ConfirmSeedPhrase"
 import RegistrationSuccess from "./registration/registrationSuccess/RegistrationSuccess"
 
-
+// authentication screen
+import VerificationSuccess from "./authentication/verificationSuccessful/VerificationSuccess"
+import FacIalAuthentication from "./authentication/facialVerification/FacIalAuthentication"
 
 
 //home screen
@@ -43,6 +45,8 @@ export {
     SeedPhrase,
     ConfirmSeedPhrase,
     RegistrationSuccess,
+    VerificationSuccess,
+    FacIalAuthentication,
 }
 
 
