@@ -5,6 +5,7 @@ import ScreenHeaderButton from "./common/headers/screenHeaderButton/ScreenHeader
 import Progress from "./common/progress/Progress"
 import Input from "./common/input/Input"
 import Header from "./common/headers/Header"
+import Dropdown from "./common/dropdown/Dropdown"
 
 
 
@@ -25,7 +26,8 @@ import RegistrationSuccess from "./registration/registrationSuccess/Registration
 
 // authentication screen
 import VerificationSuccess from "./authentication/verificationSuccessful/VerificationSuccess"
-import FacIalAuthentication from "./authentication/facialVerification/FacIalAuthentication"
+import FacialAuthentication from "./authentication/facialVerification/FacialAuthentication"
+import AccountVerification from "./authentication/accountVerification/AccountVerification"
 
 
 //home screen
@@ -35,6 +37,7 @@ export {
     Button,
     IconButton,
     Input,
+    Dropdown,
     Header,
     ScreenHeaderButton,
     // OnboardScreenHeaderButton,
@@ -46,7 +49,8 @@ export {
     ConfirmSeedPhrase,
     RegistrationSuccess,
     VerificationSuccess,
-    FacIalAuthentication,
+    FacialAuthentication,
+    AccountVerification,
 }
 
 

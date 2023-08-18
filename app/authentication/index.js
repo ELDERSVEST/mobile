@@ -1,10 +1,11 @@
-import { FacIalAuthentication, VerificationSuccess } from "../../components"
+import { AccountVerification, FacialAuthentication, VerificationSuccess } from "../../components"
 
 
 const AuthenticationPage = () => {
     return (
         // <VerificationSuccess />
-        <FacIalAuthentication />
+        // <FacialAuthentication />
+        <AccountVerification />
     )
 }
 

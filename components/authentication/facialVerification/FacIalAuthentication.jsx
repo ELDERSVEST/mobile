@@ -1,13 +1,13 @@
 import { Stack } from "expo-router"
 import { View, Text, SafeAreaView, ScrollView, Image, ImageBackground } from "react-native"
-import Header from "../../common/headers/Header"
+import Header from "../.."
 import { icons, COLORS, images } from "../../../constants"
-import { Button } from "../../"
+import { Button } from "../.."
 
 import styles from "./facialAuthentication.style"
 import globalStyles from "../../../styles/globalStyles.style"
 
-const FacIalAuthentication = () => {
+const FacialAuthentication = () => {
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: COLORS.white}}>
         <Stack.Screen 
@@ -56,4 +56,4 @@ const FacIalAuthentication = () => {
   )
 }
 
-export default FacIalAuthentication
+export default FacialAuthentication

@@ -6,6 +6,7 @@ import back from "../assets/icons/back.png"
 import seedPhraseEyeOff from "../assets/icons/seedphrase_eye_off.png"
 import copy from '../assets/icons/copy.png'
 import check from '../assets/icons/check_mark.png'
+import dropdown from '../assets/icons/dropdown.png'
 
 
 export default {
@@ -17,4 +18,5 @@ export default {
     seedPhraseEyeOff,
     copy,
     check,
+    dropdown,
 }
