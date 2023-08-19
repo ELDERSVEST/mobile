@@ -7,6 +7,7 @@ import seedPhraseEyeOff from "../assets/icons/seedphrase_eye_off.png"
 import copy from '../assets/icons/copy.png'
 import check from '../assets/icons/check_mark.png'
 import dropdown from '../assets/icons/dropdown.png'
+import whiteTick from '../assets/icons/white_tick.png'
 
 
 export default {
@@ -19,4 +20,5 @@ export default {
     copy,
     check,
     dropdown,
+    whiteTick,
 }

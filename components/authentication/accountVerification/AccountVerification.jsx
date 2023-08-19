@@ -10,21 +10,11 @@ import { useState } from "react"
 
 genderData = ["Male", "Female"]
 
-
-
-
 const AccountVerification = () => {
     const [gender, setGender] = useState('')
     const [genderDropdownVisible, setGenderDropdownVisible] = useState(false)
 
-    const onItemPress = (gender) => {
-        setGender(gender)
-        setGenderDropdownVisible(false)
-    }
-
-    const DropdownItem = ({gender}) => (
-        <TouchableOpacity onPress={() => onItemPress(gender)} style={styles.dropdownItem}><Text>{gender}</Text></TouchableOpacity>
-    )   
+     
 
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: COLORS.white}}>
@@ -51,20 +41,24 @@ const AccountVerification = () => {
                         <Text style={globalStyles.grayText(14)}>Fill in the required personal information.</Text>
                         <View style={styles.inputBox}>
                             <View style={{marginTop: 30}}>
-                                <Text style={styles.inputLabel}>Gender</Text>
                                 <Dropdown 
+                                    label="Gender"
                                     placeholder="tap to select gender"
                                     iconURL={icons.dropdown}
                                     value={gender}
+                                    items={genderData}
+                                    setValue={setGender}
+                                    dropdownVisible={genderDropdownVisible}
+                                    setDropdownVisible={setGenderDropdownVisible}
                                 />
                                 
                             </View>
                         </View>
                     
                     </View>
-                    </ScrollView>
+                </ScrollView>
                 <View style={{marginVertical: 45, }}>
-                    <Button title="Detecting your Face" active={false} />
+                    <Button title="Next" active={false} />
                 </View>
             </View>
 
