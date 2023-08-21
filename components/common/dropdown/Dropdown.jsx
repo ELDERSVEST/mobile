@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, Image, FlatList } from "react-native"
 import styles from "./dropdown.styles"
 import { icons } from "../../../constants"
 
-const Dropdown = ({ label, value, placeholder, iconURL, items, setValue, dropdownVisible, setDropdownVisible}) => {
+const Dropdown = ({ label, dropdownHeader, value, placeholder, iconURL, items, setValue, dropdownVisible, setDropdownVisible}) => {
     const onItemPress = (gender) => {
         setValue(gender)
         setDropdownVisible(false)
@@ -33,7 +33,7 @@ const Dropdown = ({ label, value, placeholder, iconURL, items, setValue, dropdow
                 <Image 
                     source={icons.whiteTick}
                 />
-                <Text style={styles.dropdownHeaderText}>Select Channel</Text>
+                <Text style={styles.dropdownHeaderText}>{dropdownHeader}</Text>
             </View>
             <View style={styles.dropdownBody}>
                 <FlatList 
