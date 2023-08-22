@@ -21,9 +21,14 @@ const AccountVerification = () => {
     const [country, setCountry] = useState('')
     const [countryDropdownVisible, setCountryDropdownVisible] = useState(false)
     const [phone, setPhone] = useState('')
+    const [DOB, setDOB] = useState('');
     const handlePhoneChange = (text) => {
         setPhone(text)
     }
+    const handleDOBChange = (date) => {
+        setDOB(date)
+    }
+
     
 
      
@@ -69,18 +74,32 @@ const AccountVerification = () => {
                             <View style={{marginTop: 30}}>
                                 <View style={styles.phoneContainer}>
                                     <DatePicker 
+                                        placeholder="tap to select DOB"
+                                        date={DOB}
+                                        onDateChange={handleDOBChange}
                                         mode="date"
                                         format="YYYY-MM-DD"
                                         showIcon={false}
                                         style={styles.datePicker}
+                                        confirmBtnText="Confirm"
+                                        cancelBtnText="Cancel"
                                         customStyles={{
                                             dateInput: {
                                               borderWidth: 0, // Remove border
+                                              alignItems: "flex-start"
                                             },
                                             dateText: {
-                                              fontSize: 18, // Customize text size
-                                            //   color: 'blue', // Customize text color
-                                            },
+                                                color: COLORS.blackText,
+                                                fontSize: 14,
+                                                fontWeight: 500,
+                                                letterSpacing: 0.28,
+                                              },
+                                              placeholderText: {
+                                                color: COLORS.grayText,
+                                                fontSize: 10,
+                                                fontWeight: 400,
+                                                letterSpacing: 0.2,
+                                              },
                                             // Customize other styles as needed
                                           }}
                                           locale={'en'}
