@@ -53,6 +53,19 @@ const AccountVerification = () => {
                                 />
                                 
                             </View>
+                            <View style={{marginTop: 30}}>
+                                <Dropdown 
+                                    label="Gender"
+                                    placeholder="tap to select gender"
+                                    iconURL={icons.dropdown}
+                                    value={gender}
+                                    items={genderData}
+                                    setValue={setGender}
+                                    dropdownVisible={genderDropdownVisible}
+                                    setDropdownVisible={setGenderDropdownVisible}
+                                />
+                                
+                            </View>
                         </View>
                     
                     </View>
