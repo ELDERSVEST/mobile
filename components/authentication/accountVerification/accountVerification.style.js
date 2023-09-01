@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     inputBox: {
         marginTop: 10,
     },
-    phoneContainer: {
+    dobContainer: {
         height: 40,
         flexDirection: "row",
         alignItems: "center",
@@ -20,11 +20,40 @@ const styles = StyleSheet.create({
         paddingVertical: 11,
         paddingHorizontal: 10,
     },
+    phoneContainer: {
+        flex: 1,
+        height: 40,
+        // width: 170,
+        flexDirection: "row",
+        alignItems: "center",
+        // justifyContent: "center",
+        borderRadius: 5,
+        borderWidth: 0.5,
+        borderColor: COLORS.grayText,
+        backgroundColor: '#F1F1F1',
+        paddingVertical: 0,
+        paddingHorizontal: 10,
+        margin: 0
+    },
     phoneBox: {
         flex: 1,
+        // width: 500,
+        backgroundColor: 'red',
+        margin: 0,
+        padding: 0,
+        height: 40,
         // alignItems: "center",
         // justifyContent: "center",
         
+    },
+    phoneTextContainer : {
+        height: 50,
+        alignItems: "flex-start",
+        position: "absolute",
+        top: -280,
+        backgroundColor: '#F1F1F1',
+        padding: 0,
+        margin: 0,
     },
     phoneLabel: {
         fontSize: 14,
@@ -37,7 +66,8 @@ const styles = StyleSheet.create({
         width: 1,
         height: '100%',
         backgroundColor: COLORS.grayText,
-        marginRight: 6,
+        marginHorizontal: 5,
+        
     },
     countryCode: {
         marginLeft: 10,
