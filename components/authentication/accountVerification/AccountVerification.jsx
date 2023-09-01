@@ -1,13 +1,17 @@
 import { Stack } from "expo-router"
-import { View, Text, SafeAreaView, ScrollView, Image, TextInput, ImageBackground, FlatList, TouchableOpacity } from "react-native"
+import { View, Text, SafeAreaView, ScrollView, Image, TextInput, FlatList, TouchableOpacity } from "react-native"
 import DatePicker from 'react-native-datepicker'
+import CountryPicker, {CountryModalProvider} from 'react-native-country-picker-modal';
+import PhoneInput from 'react-native-phone-input';
+
+
 import {Header, Input, } from "../../"
 import { icons, COLORS, images } from "../../../constants"
 import { Button, Dropdown,  } from "../../"
 
 import styles from "./accountVerification.style"
 import globalStyles from "../../../styles/globalStyles.style"
-import { useState } from "react"
+import { cloneElement, useState } from "react"
 
 genderData = ["Male", "Female"]
 verificationChannelData = ["Bank Verification Number", "National ID"]
@@ -20,10 +24,16 @@ const AccountVerification = () => {
     const [verificationChannelDropdownVisible, setVerificationDropdownVisible] = useState(false)
     const [country, setCountry] = useState('')
     const [countryDropdownVisible, setCountryDropdownVisible] = useState(false)
-    const [phone, setPhone] = useState('')
+    const [countryCode, setCountryCode] = useState('NG');
+    const [phoneNumber, setPhoneNumber] = useState('');
     const [DOB, setDOB] = useState('');
-    const handlePhoneChange = (text) => {
-        setPhone(text)
+
+    const handleCountrySelect = (country) => {
+        setCountryCode(country.phoneCode)
+    }
+
+    const handlePhoneNumberChange = (number) => {
+        setPhoneNumber(number)
     }
     const handleDOBChange = (date) => {
         setDOB(date)
@@ -72,7 +82,8 @@ const AccountVerification = () => {
                                 
                             </View>
                             <View style={{marginTop: 30}}>
-                                <View style={styles.phoneContainer}>
+                                <Text style={styles.phoneLabel}>Date of Birth</Text>
+                                <View style={styles.dobContainer}>
                                     <DatePicker 
                                         placeholder="tap to select DOB"
                                         date={DOB}
@@ -111,7 +122,42 @@ const AccountVerification = () => {
                                 </View>
                                 
                             </View>
-                            <View style={{marginTop: 30}}>
+                            <CountryModalProvider>
+                            <View style={{ marginTop: 30, }}>
+                                <Text style={styles.phoneLabel}>Phone Number</Text>
+                                <View style={styles.phoneContainer}>
+                                    <CountryPicker 
+                                        withFilter
+                                        withAlphaFilter
+                                        withFlag
+                                        withCallingCode
+                                        withEmoji
+                                        countryCode={countryCode}
+                                        // withFlagButton
+                                    />
+                                    <PhoneInput 
+                                        flagStyle={{display: "none"}}
+                                        initialCountry={countryCode}
+                                        initialValue="9096426964"
+                                        textProps={{
+                                            placeholder: "type number..."
+                                        }}
+                                        style={{
+                                            height: 40,
+                                            flex: 1,
+                                        }}
+                                        textComponent={ () => (<View style={{flex: 1, flexDirection: "row", height: 40, justifyContent: "center", alignItems: "center", paddingVertical: 7,}}><Text>{`+${country.phoneCode ? country.phoneCode : ''}`}</Text><View style={styles.divider} /><TextInput style={{
+                                            flex: 1,
+                                            height: 40,
+                                        }} /></View>)}
+                                    />
+                                </View>
+                            </View>
+                            </CountryModalProvider>
+                                
+                                
+                        {/* </View> */}
+                            {/* <View style={{marginTop: 30}}>
                                 <Text style={styles.phoneLabel}>Phone Number</Text>
 
                                 <View style={styles.phoneContainer}>
@@ -129,7 +175,7 @@ const AccountVerification = () => {
                                     />
                                     
                                 </View>
-                            </View>
+                            </View> */}
                             <View style={{marginTop: 30}}>
                                 <Dropdown 
                                     label="Country"
