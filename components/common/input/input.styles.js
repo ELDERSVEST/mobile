@@ -19,7 +19,14 @@ const styles = StyleSheet.create({
         // alignItems: "center",
         // justifyContent: "center",
         
-    }
+    },
+    inputLabel: {
+        fontSize: 14,
+        fontWeight: 500,
+        letterSpacing: 0.28,
+        color: COLORS.blackText,
+        marginBottom: 10,
+    },
 })
 
 export default styles

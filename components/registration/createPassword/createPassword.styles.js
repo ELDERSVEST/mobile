@@ -9,13 +9,13 @@ const styles = StyleSheet.create({
         ...globalStyles.grayText(14),
         letterSpacing: 0.28,
     },
-    inputLabel: {
-        fontSize: 14,
-        fontWeight: 500,
-        letterSpacing: 0.28,
-        color: COLORS.blackText,
-        marginBottom: 10,
-    },
+    // inputLabel: {
+    //     fontSize: 14,
+    //     fontWeight: 500,
+    //     letterSpacing: 0.28,
+    //     color: COLORS.blackText,
+    //     marginBottom: 10,
+    // },
     inputInfo: {
         marginTop: 5,
         letterSpacing: 0.2,

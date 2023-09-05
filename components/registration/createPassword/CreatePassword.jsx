@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { View, Text, Switch, ScrollView } from "react-native"
 import { SafeAreaView } from "react-native"
 import {Progress, ScreenHeaderButton, Input, Button} from "../.."
@@ -12,6 +13,11 @@ import styles from "./createPassword.styles"
 
 
 const CreatePassword = () => {
+    const [isSwitchEnabled, setIsSwitchEnabled] = useState(false);
+
+  const toggleSwitch = () => {
+    setIsSwitchEnabled(previousState => !previousState);
+  };
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: COLORS.white}}>
         <Stack.Screen 
@@ -56,26 +62,28 @@ const CreatePassword = () => {
                         </View>
 
                         <View>
-                            <Text style={styles.inputLabel}>Password</Text>
 
-                            <Input placeholder="Gtryh3421." iconURL={icons.eye} />
+                            <Input label="Password" placeholder="Gtryh3421." iconURL={icons.eye} />
                             <Text style={styles.inputInfo}>Password strength: <Text style={{color: '#1473DF'}}>Fair</Text></Text>
                         </View>
                         <View style={{marginTop: 30}}>
-                            <Text style={styles.inputLabel}>Confirm password</Text>
+                            
 
-                            <Input placeholder="**********" iconURL={icons.eyeOff} />
+                            <Input label="Confirm password" placeholder="**********" iconURL={icons.eyeOff} />
                         </View>
 
                         <View style={styles.biometricsContainer}>
                             <Text style={styles.biometricsText}>Unlock with Biometrics</Text>
                             <Switch 
-                                trackColor = {{ false: '#767676', true: '#fff' }}
+                                trackColor = {{ false: '#767676', true: COLORS.primary }}
+                                thumbColor={isSwitchEnabled ? COLORS.deepSecondary : "#fff"}
                                 ios_backgroundColor="#767676"
                                 style={{ 
                                     transform: [{ scaleX: 0.7 }, { scaleY: 0.8 }], 
                                     
                                 }} 
+                                onValueChange={toggleSwitch}
+                                value={isSwitchEnabled}   
                                 
                                 />
                         </View>

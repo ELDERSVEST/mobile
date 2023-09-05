@@ -3,21 +3,23 @@ import { icons, COLORS } from "../../../constants"
 
 import styles from "./input.styles"
 
-const Input = ({ value, placeholder, iconURL, placeholderStyle}) => {
+const Input = ({ value, label, placeholder, iconURL,}) => {
   return (
+    <>
+    <Text style={styles.inputLabel}>{label}</Text>
+
     <View style={styles.inputContainer}>
         <TextInput 
           value={value}
-          style={ value === '' ? styles.inputBox : [styles.inputBox, placeholderStyle]}
+          style={styles.inputBox}
           placeholder={placeholder}
-          placeholderTextColor={placeholderStyle.color}
           
         />
         <Image 
             source={iconURL}
         />
     </View>
-    
+    </>
   )
 }
 
